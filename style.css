@@ -1,35 +1,103 @@
 body {
-    font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, Helvetica, Arial, sans
--serif, "Apple Color Emoji", "Segoe UI Emoji", "Segoe UI Symbol";
+    font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, Helvetica, Arial, sans-serif, "Apple Color Emoji", "Segoe UI Emoji", "Segoe UI Symbol";
     margin: 0;
-    padding: 20px;
-    background-color: #f5f5f7; /* Light gray background */
+    padding: 0; /* Remove default body padding for more control */
+    background: linear-gradient(135deg, #a8dadc, #457b9d); /* Calming gradient background */
+    color: #333; /* Darker text for better contrast */
+    min-height: 100vh; /* Ensure full viewport height is covered */
+    display: flex;
+    justify-content: center;
+    align-items: center; /* Center the container vertically and horizontally */
 }
 
 .container {
-    max-width: 600px;
-    margin: 0 auto;
-    background-color: #fff; /* White container */
-    border-radius: 10px; /* Rounded corners */
-    box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1); /* Subtle shadow */
+    max-width: 500px; /* Slightly reduce max-width for a cleaner look */
+    background-color: rgba(255, 255, 255, 0.9); /* Semi-transparent white background */
+    border-radius: 15px; /* More pronounced rounded corners */
+    box-shadow: 0 8px 20px rgba(0, 0, 0, 0.2); /* More prominent shadow for depth */
+    padding: 40px; /* Increased padding */
+    text-align: center; /* Center text within the container */
+}
+
+h1 {
+    color: #1d3557; /* Dark blue heading */
+    margin-bottom: 30px;
+    font-size: 2.5em;
+    font-weight: 600;
 }
 
 #location-form {
     display: flex;
-    margin-bottom: 20px;
+    margin-bottom: 30px;
+    gap: 10px; /* Add some space between input and button */
 }
 
 #location {
     flex: 1;
-    padding: 12px; /* Slightly more padding */
-    border: 1px solid #d1d1d6; /* Lighter border color */
-    border-radius: 5px;
+    padding: 14px; /* Slightly more padding */
+    border: none; /* Remove default border */
+    border-radius: 8px; /* More rounded input */
     font-size: 16px;
+    color: #333;
+    background-color: #f8f9fa; /* Light background for input */
+    box-shadow: inset 0 1px 3px rgba(0, 0, 0, 0.1); /* Subtle inner shadow */
+}
+
+#location:focus {
+    outline: none; /* Remove default focus outline */
+    box-shadow: inset 0 1px 3px rgba(0, 0, 0, 0.1), 0 0 5px rgba(69, 123, 157, 0.5); /* Add a subtle focus glow */
+}
+
+#location::placeholder {
+    color: #aaa; /* Lighter placeholder text */
+}
+
+#location-form button {
+    background-color: #1d3557; /* Dark blue button */
+    color: #fff;
+    border: none;
+    padding: 14px 20px;
+    border-radius: 8px;
+    font-size: 16px;
+    cursor: pointer;
+    transition: background-color 0.3s ease; /* Smooth hover transition */
+}
+
+#location-form button:hover {
+    background-color: #457b9d; /* Slightly lighter blue on hover */
 }
 
 #weather-info {
-    border: 1px solid #d1d1d6; /* Lighter border color */
-    padding: 20px;
-    border-radius: 5px;
-    background: #fff; /* White background */
+    background-color: rgba(255, 255, 255, 0.8); /* Semi-transparent white background */
+    border-radius: 10px;
+    padding: 30px;
+    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.15); /* More noticeable shadow */
+    text-align: left; /* Align weather information to the left */
+}
+
+#weather-info h2 {
+    color: #1d3557;
+    margin-top: 0;
+    margin-bottom: 15px;
+    font-size: 2em;
+}
+
+#weather-info p {
+    line-height: 1.6;
+    margin-bottom: 10px;
+    font-size: 1.1em;
+    color: #555;
+}
+
+#weather-info .temperature {
+    font-size: 2.5em;
+    font-weight: bold;
+    color: #e63946; /* Accent color for temperature */
+    margin-bottom: 5px;
+}
+
+#weather-info .description {
+    font-style: italic;
+    color: #777;
+    margin-bottom: 15px;
 }
